@@ -1,11 +1,26 @@
 body{
 
-    background-color: #425357 ;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+    background-color: #2ECBE9 ;
 }
 
 
 .intro{
 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
-    
+}
+
+
+#loader{
+    background: #050a30 url(images/loader.gif) no-repeat center center;
+    background-size: 48;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }

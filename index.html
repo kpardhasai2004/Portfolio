@@ -9,6 +9,8 @@
 
   <body>
 
+    <div id="loader" style="background-image: url('images/loader.gif');" ></div>
+
     <nav class=" bg-slate-900 sticky top-0 border-t-2 border-cyan-500" >
 
 
@@ -407,6 +409,13 @@
         </div>
       </div>
     </section>
-  
+
+    <script>
+      var loader = document.getElementById("loader");
+      window.addEventListener("load", function(){
+        loader.style.display = "none";
+      })
+    </script>
+
   </body>
 </html>
