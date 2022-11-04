@@ -8,7 +8,8 @@ body{
 
 
 .intro{
-
+    
+	
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,3 +25,31 @@ body{
     position: fixed;
     z-index: 100;
 }
+
+@keyframes changeBgColor{
+    0%     {background-color: #D0E3F1;}
+    25%    {background-color: #519ed4;}
+    50%    {background-color: #0093D4;}
+    75%    {background-color: #519ed4;}
+    100%   {background-color: #D0E3F1;}
+  }
+  
+  
+  @keyframes movement{
+      from{padding-left: 0%;}
+      to{
+          padding-left: 93%;}
+  }
+  
+  .div1{
+      width: 100%;
+      animation-name: changeBgColor;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+  }
+  
+  .move{
+      animation-name: movement;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+  }
