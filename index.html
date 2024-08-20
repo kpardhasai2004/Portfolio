@@ -1,133 +1,92 @@
 <!doctype html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
     <link rel="stylesheet" href="css/style.css">
-  </head>
+    <style>
+        .page {
+            display: none;
+        }
+        .active-page {
+            display: block;
+        }
+    </style>
+</head>
 
-  <body>
-
-    <div id="loader" class = "" >
-      <div>
-        <div class="p-6 max-w-sm mx-auto my-11 rounded-md bg-blue-900">
-            <p>
-              <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white">Hi! </h5>
-              <h6 class="mb-2 text-xl font-semibold tracking-tight text-white">I am KAPAGANTI PARDHA SAI </h6>
-              <h6 class="mb-2 text-xl font-semibold tracking-tight text-white">student at SRM Institute of Science and Technology </h6>
-            </p>
-            <p class="mb-3 font-normal text-white"> please wait the page is loading...</p>
-            <div class="div1 rounded-xl">
-              <svg class="move h-6  fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-              </svg>
+<body class="bg-gray-900 text-white">
+    <!-- Loader Section -->
+    <div id="loader" class="flex justify-center items-center h-screen bg-gray-900">
+        <div class="p-6 max-w-sm mx-auto rounded-md bg-blue-900">
+            <h5 class="text-2xl font-semibold text-white">Hi!</h5>
+            <h6 class="text-xl font-semibold text-white">I am KAPAGANTI PARDHA SAI</h6>
+            <h6 class="text-xl font-semibold text-white">Student at SRM Institute of Science and Technology</h6>
+            <p class="font-normal text-white">Please wait, the page is loading...</p>
+            <div class="div1 rounded-xl mt-4">
+                <svg class="move h-6 fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11"/>
+                </svg>
             </div>
         </div>
-      </div>
     </div>
 
-    <nav class="  bg-slate-900 sticky top-0 border-t-2 border-blue-500" >
-
-
-      <div class="flex justify-center ">
-
-        <div>
-          <a href="#home" class=" text-slate-300 hover:text-slate-50 hover:border-b-4 mx-3 p-1 hover:p-2 border-slate-400" >Home</a>
-        </div>
-
-        <div>
-          <a href="#details" class="text-slate-300 hover:text-slate-50 hover:border-b-4 mx-3 p-1 hover:p-2 border-slate-400" >My details</a>
-        </div>
-
-        <div>
-          <a href="#projects" class="text-slate-300 hover:text-slate-50 hover:border-b-4 mx-3 p-1 hover:p-2 border-slate-400" >Projects</a>
-        </div>
-
-        <div>
-          <a href="#contact" class="text-slate-300 hover:text-slate-50 hover:border-b-4 mx-3 p-1 hover:p-2 border-slate-400" >Contact</a>
-        </div>
-
+    <!-- Navigation Menu -->
+    <nav class="flex sticky top-0 z-50 justify-between bg-gray-900">
+      <div class="flex space-x-7 bg-black w-1/2 px-5 py-5 -skew-x-12 -translate-x-1 -translate-y-1">
+          <a href="#" onclick="showPage('home')" class="text-xl hover:font-semibold text-slate-300 hover:text-slate-50 hover:border-b-4 border-slate-400">Home</a>
+          <a href="#" onclick="showPage('details')" class="text-xl hover:font-semibold text-slate-300 hover:text-slate-50 hover:border-b-4 border-slate-400">My Details</a>
+          <a href="#" onclick="showPage('projects')" class="text-xl hover:font-semibold text-slate-300 hover:text-slate-50 hover:border-b-4 border-slate-400">Projects</a>
+          <a href="#" onclick="showPage('contact')" class="text-xl hover:font-semibold text-slate-300 hover:text-slate-50 hover:border-b-4 border-slate-400">Contact</a>
       </div>
-      
-      
-
-      <div class="flex justify-center sm:justify-end border-y-2 border-blue-500">
-
-        <div>
-          <a href="https://github.com/kpardhasai2004" class="  " >
-            <img class=" h-14 hover:border-2 hover:rounded-full hover:border-cayan-500 my-1 mx-2  " src=" images/github.png " alt=""/>
+      <div class="flex space-x-7 px-5">
+          <a href="https://github.com/kpardhasai2004">
+              <img class="h-12 w-12 hover:border-2 hover:rounded-full hover:border-grey-500" src="images/github.png" alt="GitHub">
           </a>
-        </div>
-
-        <div>
-          <a href="https://www.linkedin.com/in/pardha-sai-kapaganti/" class=" " >
-            <img class=" h-14 hover:border-2 hover:rounded-full hover:border-cayan-500 my-1 mx-2  " src=" images/linkedin.png " alt=""/>
+          <a href="https://www.linkedin.com/in/pardha-sai-kapaganti/">
+              <img class="h-12 w-12 hover:border-2 hover:rounded-full hover:border-grey-500" src="images/linkedin.png" alt="LinkedIn">
           </a>
-        </div>
-
-        <div>
-          <a href="#contact" class=" " >
-            <img class=" h-14 hover:border-2 hover:rounded hover:border-cayan-500 my-1 mx-2  " src=" images/email.png " alt=""/>
+          <a href="#contact" onclick="showPage('contact')">
+              <img class="h-12 w-12 hover:border-2 hover:rounded-full hover:border-grey-500" src="images/email.png" alt="Email">
           </a>
-        </div>
-
-        <div>
-          <a href="https://instagram.com/partimeking2004?igshid=YmMyMTA2M2Y=" class=" " >
-            <img class=" h-14 hover:border-2 hover:rounded-full hover:border-cayan-500 my-1 mx-2  " src=" images/instagram.png " alt=""/>
+          <a href="https://instagram.com/partimeking2004?igshid=YmMyMTA2M2Y=">
+              <img class="h-12 w-12 hover:border-2 hover:rounded-full hover:border-grey-500" src="images/instagram.png" alt="Instagram">
           </a>
-        </div>
-
       </div>
     </nav>
+  
 
-    <section id="home" style="background-image: url('images/title_page_1.png');">
-      
-      <div class = "flex justify-around flex-col sm:flex-row intro  m-3 p-3" >
-
-        <div>
-          <img class=" my-auto  aspect-auto  " src="images/portfolio_photo.png" alt="">
+    <!-- Home Section -->
+    <section id="home" class="page active-page p-8">
+      <div class="flex flex-col sm:flex-row justify-center items-center sm:py-16 w-full max-w-6xl mx-auto sm:space-x-8 space-y-6 sm:space-y-0">
+        <div class="flex-none sm:flex-1 w-full sm:w-1/2">
+            <img class="max-w-full" src="images/portfolio_photo.png" alt="Your Image">
         </div>
-
-        <div class="flex flex-col justify-center ">
-          <br>
-          <div class="text-3xl font-extrabold mx-5 ">
-            <span class="bg-clip-text text-transparent bg-slate-100">
-              Hello!
-            </span>
-          </div>
-        
-          <div class="text-3xl font-extrabold mx-5 ">
-            <span class="bg-clip-text text-transparent bg-slate-100">
-              I'm Kapaganti Pardha Sai.
-            </span>
-          </div>
-
-          <div class="text-3xl font-extrabold mx-5 ">
-            <span class="bg-clip-text text-transparent bg-slate-50 ">
-              Driven to succeed as a Developer.
-            </span>
-          </div>
-
-          <div class="text-xl font-extrabold mx-5 ">
-            <span class="bg-clip-text text-transparent bg-slate-50 ">
-              Interested in artificial intelligence, deep learning, and machine learning.
-            </span>
-          </div>
-
-          <div class="text-xl font-extrabold mx-5 ">
-            <span class="bg-clip-text text-transparent bg-slate-50 ">
-              To be proficient partner with regarded association like you with a target to acknowledge the demands and use my education all the more definitively and buckle down towards accomplishing the objectives of association
-            </span>
-          </div>
-
+        <div class="flex-1 w-full sm:w-1/2 space-y-4 mx-4 text-center sm:text-left">
+            <div class="text-3xl font-extrabold text-slate-100">
+                Hello!
+            </div>
+            <div class="text-3xl font-extrabold text-slate-100">
+                I'm Kapaganti Pardha Sai.
+            </div>
+            <div class="text-3xl font-extrabold text-slate-100">
+                Driven to succeed as a Developer.
+            </div>
+            <div class="text-xl font-bold text-slate-100">
+                Interested in artificial intelligence, deep learning, and machine learning.
+            </div>
+            <div class="text-xl font-bold text-slate-100">
+                To be a proficient partner with a regarded association like you, aiming to acknowledge demands and apply my education effectively, working hard towards achieving the organization’s goals.
+            </div>
         </div>
-      </div>
+    </div>
+    
     </section>
 
-    <section id="details" style="background-image: url('images/title_page_2.png');">
-      <div class="intro m-3 p-3 ">
+    <!-- Details Section -->
+    <section id="details" class="page p-8">
+      <div class="">
         <div class="text-2xl font-extrabold mx-5 ">
           <span class="bg-clip-text text-transparent bg-sky-50 ">
             Educational details
@@ -314,8 +273,9 @@
       </div>
     </section>
 
-    <section id="projects" style="background-image: url('images/title_page_2.png');">
-      <div class="intro m-3 p-3 ">
+    <!-- Projects Section -->
+    <section id="projects" class="page p-8">
+      <div class="">
 
         <div class="text-2xl font-extrabold mx-5 ">
           <span class="bg-clip-text text-transparent bg-sky-50 ">
@@ -476,11 +436,11 @@
       </div>
     </section>
 
-    <section id="contact" style="background-image: url('images/title_page_3.png'); background-position: ;">
-      <div class="intro m-3 p-3 ">
+    <!-- Contact Section -->
+    <section id="contact" class="page p-8">
+      <div class="">
 
         <div class="flex flex-col justify-center ">
-          <br>
           <div class="text-3xl font-extrabold mx-auto ">
             <span class="bg-clip-text text-transparent bg-slate-100">
               Contact me
@@ -547,11 +507,18 @@
     </section>
 
     <script>
-      var loader = document.getElementById("loader");
-      window.addEventListener("load", function(){
-        loader.style.display = "none";
-      })
-    </script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active-page');
+            });
+            document.getElementById(pageId).classList.add('active-page');
+        }
 
-  </body>
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+            showPage('home');
+        });
+    </script>
+</body>
 </html>
